@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.Robot;
 
 /**
  * This houses all the raw code for the elevator, It Imports the motor(s) and makes
@@ -21,7 +22,6 @@ public class BallIntakeSubsystem extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-	// Set the default command for a subsystem here.
-	// setDefaultCommand(new MySpecialCommand());
+	setDefaultCommand(Robot.ballIntakeCommand);
   }
 }
