@@ -21,7 +21,7 @@ import frc.robot.RobotMap;
 public class HatchIntakeSubsystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-	private static VictorSPX hatchIntake = new VictorSPX(RobotMap.HatchIntakePort);
+	private static VictorSPX hatchIntake = new VictorSPX(RobotMap.hatchIntakePort);
 
 	public void setHatchIntakeSpeed(double IntakeSpeed) {
 		hatchIntake.setNeutralMode(NeutralMode.Brake);

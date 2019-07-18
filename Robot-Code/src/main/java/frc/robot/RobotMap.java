@@ -15,25 +15,29 @@ package frc.robot;
  * floating around.
  */
 public class RobotMap {
-	//Drive Train
-		//Left
-			public static int leftDriveMasterPort = 10;
-			public static int leftDriveSlavePort = 11;
+	//Speeds
+	public static double robotDriveSpeed = .5;
+	public static double hatchIntakeSpeed = 1;
+	public static double ballIntakeSpeed = 1;
 
-		//Right
-			public static int rightDriveMasterPort = 12;
-			public static int rightDriveSlavePort = 13;
+	//Motor Controllers
+		//Drive Train
+			//Left
+				public static int leftDriveMasterPort = 10;
+				public static int leftDriveSlavePort = 11;
+
+			//Right
+				public static int rightDriveMasterPort = 12;
+				public static int rightDriveSlavePort = 13;
+		//Ball Intake
+			public static int ballIntakePort = 14;
+		//Hatch Intake
+			public static int hatchIntakePort = 15;
 
 	//Controllers
 		//USB
 			public static int driverController = 0;
 			public static int operatorController = 1;
-
-	//Ball Intake
-		public static int ballIntakePort = 14;
-
-	//Hatch Intake
-		public static int HatchIntakePort = 15;
 
 	//Invert Motors
 		//Drive Train
