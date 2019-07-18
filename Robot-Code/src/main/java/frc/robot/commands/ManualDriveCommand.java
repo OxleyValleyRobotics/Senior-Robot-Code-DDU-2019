@@ -9,6 +9,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import frc.robot.RobotMap;
 
 public class ManualDriveCommand extends Command {
 	public ManualDriveCommand() {
@@ -23,7 +24,7 @@ public class ManualDriveCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.driveSubsystem.robotTankDrive(Robot.oi.getRawDriverAxis(1), Robot.oi.getRawDriverAxis(5));
+		Robot.driveSubsystem.robotTankDrive(Robot.oi.getRawDriverAxis(1) * RobotMap.robotDriveSpeed, Robot.oi.getRawDriverAxis(5) * RobotMap.robotDriveSpeed);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
