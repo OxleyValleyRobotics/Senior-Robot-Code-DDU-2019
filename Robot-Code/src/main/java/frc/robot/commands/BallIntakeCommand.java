@@ -25,7 +25,7 @@ public class BallIntakeCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.ballIntakeSubsystem.setBallIntakeSpeed(Robot.oi.getRawOperatorAxis(5) * RobotMap.ballIntakeSpeed);
+		Robot.ballIntakeSubsystem.setBallIntakeSpeed(Robot.oi.getRawOperatorAxis(0));
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

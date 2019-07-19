@@ -24,7 +24,7 @@ public class ManualDriveCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.driveSubsystem.robotTankDrive(Robot.oi.getRawDriverAxis(1) * RobotMap.robotDriveSpeed, Robot.oi.getRawDriverAxis(5) * RobotMap.robotDriveSpeed  );
+		Robot.driveSubsystem.robotTankDrive(Robot.oi.getRawDriverAxis(5) * RobotMap.robotDriveSpeed, Robot.oi.getRawDriverAxis(1) * RobotMap.robotDriveSpeed);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

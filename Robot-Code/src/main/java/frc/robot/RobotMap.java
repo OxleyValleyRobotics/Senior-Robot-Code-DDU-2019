@@ -16,9 +16,9 @@ package frc.robot;
  */
 public class RobotMap {
 	//Speeds
-	public static double robotDriveSpeed = .5;
-	public static double hatchIntakeSpeed = 1;
-	public static double ballIntakeSpeed = 1;
+	public static double robotDriveSpeed = .7;
+	public static double hatchIntakeSpeed = .5;
+	public static double ballIntakeSpeed = .4;
 
 	//Motor Controllers
 		//Drive Train

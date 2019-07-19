@@ -19,6 +19,7 @@ import frc.robot.commands.ManualDriveCommand;
 import frc.robot.subsystems.BallIntakeSubsystem;
 import frc.robot.subsystems.DriveBaseSubsystem;
 import frc.robot.subsystems.HatchIntakeSubsystem;
+import frc.robot.subsystems.LimeLightSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -34,6 +35,7 @@ public class Robot extends TimedRobot {
 	public static DriveBaseSubsystem driveSubsystem = new DriveBaseSubsystem();
 	public static HatchIntakeSubsystem hatchIntakeSubsystem = new HatchIntakeSubsystem();
 	public static BallIntakeSubsystem ballIntakeSubsystem  = new BallIntakeSubsystem();
+	public static LimeLightSubsystem limelightSubsystem = new LimeLightSubsystem();
 
 	//Commands
 	public static ManualDriveCommand manualDriveCommand = new ManualDriveCommand();
