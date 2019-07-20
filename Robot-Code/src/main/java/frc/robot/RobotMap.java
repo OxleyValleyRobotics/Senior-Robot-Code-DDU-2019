@@ -22,7 +22,7 @@ public class RobotMap {
 
 	//Motor Controllers
 		//Drive Train
-			//Left
+			//Le
 				public static int leftDriveMasterPort = 10;
 				public static int leftDriveSlavePort = 11;
 
@@ -45,6 +45,6 @@ public class RobotMap {
 			public static boolean rightDriveInverted = true;
 		//Intakes
 			public static boolean ballIntakeInverted = false;
-			public static boolean hatchIntakeInverted = false;
+			public static boolean hatchIntakeInverted = true;
 	
 }
