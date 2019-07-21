@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -19,7 +22,6 @@ import frc.robot.commands.ManualDriveCommand;
 import frc.robot.subsystems.BallIntakeSubsystem;
 import frc.robot.subsystems.DriveBaseSubsystem;
 import frc.robot.subsystems.HatchIntakeSubsystem;
-import frc.robot.subsystems.LimeLightSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -35,13 +37,19 @@ public class Robot extends TimedRobot {
 	public static DriveBaseSubsystem driveSubsystem = new DriveBaseSubsystem();
 	public static HatchIntakeSubsystem hatchIntakeSubsystem = new HatchIntakeSubsystem();
 	public static BallIntakeSubsystem ballIntakeSubsystem  = new BallIntakeSubsystem();
-	public static LimeLightSubsystem limelightSubsystem = new LimeLightSubsystem();
 
 	//Commands
 	public static ManualDriveCommand manualDriveCommand = new ManualDriveCommand();
 	public static AutoDriveCommand autoDriveCommand = new AutoDriveCommand();
 	public static HatchIntakeCommand hatchIntakeCommand = new HatchIntakeCommand();
 	public static BallIntakeCommand ballIntakeCommand = new BallIntakeCommand();
+
+	//Network Tables
+		NetworkTable LimeLightTable = NetworkTableInstance.getDefault().getTable("limelight");
+		NetworkTableEntry LLtx= LimeLightTable.getEntry("tx");
+		NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
+		NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
+		double Im1 = 1.0;
 
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -68,6 +76,15 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotPeriodic() {
+		// Pulls vales and puts them in "double" var's
+		double LimeLightTargetX = LLtx.getDouble(0.0);
+		double LimeLightTargetY = LLty.getDouble(0.0);
+		double LimeLightTargetArea = LLta.getDouble(0.0);
+		// Puts values on smartdashboard.
+		SmartDashboard.putNumber("LimeLight X Value", LimeLightTargetX);
+		SmartDashboard.putNumber("LimeLight Y Value", LimeLightTargetY);
+		SmartDashboard.putNumber("LimeLight A Value", LimeLightTargetArea);
+		SmartDashboard.putNumber("AM I 1?", Im1);
 	}
 
 	/**

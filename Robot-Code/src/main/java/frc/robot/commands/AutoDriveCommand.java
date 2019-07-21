@@ -12,8 +12,7 @@ import frc.robot.Robot;
 
 public class AutoDriveCommand extends Command {
 	public AutoDriveCommand() {
-		
-		requires(Robot.limelightSubsystem);
+		requires(Robot.driveSubsystem);
 	}
 
 	// Called just before this Command runs the first time
