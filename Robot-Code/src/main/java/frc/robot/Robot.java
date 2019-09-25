@@ -49,6 +49,7 @@ public class Robot extends TimedRobot {
 	NetworkTableEntry LLtx= LimeLightTable.getEntry("tx");
 	NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
 	NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
+	public static boolean hello;
 
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -83,7 +84,9 @@ public class Robot extends TimedRobot {
 		SmartDashboard.putNumber("LimeLight X Value", LimeLightTargetX);
 		SmartDashboard.putNumber("LimeLight Y Value", LimeLightTargetY);
 		SmartDashboard.putNumber("LimeLight A Value", LimeLightTargetArea);
-		SmartDashboard.putBoolean("Hi", Robot.autoDriveCommand.hi);
+
+		SmartDashboard.putBoolean("Hello", hello);
+		
 	}
 
 	/**
@@ -160,5 +163,6 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void testPeriodic() {
+		double hello = 2.0;
 	}
 }

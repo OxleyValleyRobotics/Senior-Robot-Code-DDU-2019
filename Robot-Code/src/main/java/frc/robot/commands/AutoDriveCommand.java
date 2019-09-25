@@ -30,7 +30,6 @@ public class AutoDriveCommand extends Command {
 	NetworkTableEntry LLtx = LimeLightTable.getEntry("tx");
 	NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
 	NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
-	boolean hi = true;
 	}
 
 	// Called repeatedly when this Command is scheduled to run
