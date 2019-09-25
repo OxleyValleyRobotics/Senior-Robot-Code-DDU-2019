@@ -84,9 +84,13 @@ public class Robot extends TimedRobot {
 		SmartDashboard.putNumber("LimeLight X Value", LimeLightTargetX);
 		SmartDashboard.putNumber("LimeLight Y Value", LimeLightTargetY);
 		SmartDashboard.putNumber("LimeLight A Value", LimeLightTargetArea);
+<<<<<<< HEAD
 
 		SmartDashboard.putBoolean("Hello", hello);
 		
+=======
+		SmartDashboard.putBoolean("Hi", Robot.autoDriveCommand.hi);
+>>>>>>> 689bfb048fc167499dcea48f54ad623c58e71847
 	}
 
 	/**
