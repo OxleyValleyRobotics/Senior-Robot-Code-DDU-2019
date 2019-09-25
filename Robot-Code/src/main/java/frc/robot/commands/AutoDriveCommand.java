@@ -7,6 +7,9 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
@@ -14,15 +17,27 @@ public class AutoDriveCommand extends Command {
 	public AutoDriveCommand() {
 		requires(Robot.driveSubsystem);
 	}
+	private double LLtx;
+	private double LLty;
+	private double LLta;
 
 	// Called just before this Command runs the first time
 	@Override
 	protected void initialize() {
+	NetworkTable LimeLightTable = NetworkTableInstance.getDefault().getTable("limelight");
+	NetworkTableEntry LLtx = LimeLightTable.getEntry("tx");
+	NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
+	NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
 	}
 
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
+		if (LLta < 5) {
+			//Robot.driveSubsystem.robotTankDrive(.4, .4);
+			System.out.print("Driving Forward");
+		}
+
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

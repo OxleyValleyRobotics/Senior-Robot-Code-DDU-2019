@@ -45,11 +45,10 @@ public class Robot extends TimedRobot {
 	public static BallIntakeCommand ballIntakeCommand = new BallIntakeCommand();
 
 	//Network Tables
-		NetworkTable LimeLightTable = NetworkTableInstance.getDefault().getTable("limelight");
-		NetworkTableEntry LLtx= LimeLightTable.getEntry("tx");
-		NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
-		NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
-		double Im1 = 1.0;
+	NetworkTable LimeLightTable = NetworkTableInstance.getDefault().getTable("limelight");
+	NetworkTableEntry LLtx= LimeLightTable.getEntry("tx");
+	NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
+	NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
 
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -84,7 +83,6 @@ public class Robot extends TimedRobot {
 		SmartDashboard.putNumber("LimeLight X Value", LimeLightTargetX);
 		SmartDashboard.putNumber("LimeLight Y Value", LimeLightTargetY);
 		SmartDashboard.putNumber("LimeLight A Value", LimeLightTargetArea);
-		SmartDashboard.putNumber("AM I 1?", Im1);
 	}
 
 	/**
