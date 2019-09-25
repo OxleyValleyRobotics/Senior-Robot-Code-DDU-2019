@@ -49,7 +49,7 @@ public class Robot extends TimedRobot {
 	NetworkTableEntry LLtx= LimeLightTable.getEntry("tx");
 	NetworkTableEntry LLty = LimeLightTable.getEntry("ty");
 	NetworkTableEntry LLta = LimeLightTable.getEntry("ta");
-	public static boolean hello;
+	public static double hello;
 
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -84,9 +84,7 @@ public class Robot extends TimedRobot {
 		SmartDashboard.putNumber("LimeLight X Value", LimeLightTargetX);
 		SmartDashboard.putNumber("LimeLight Y Value", LimeLightTargetY);
 		SmartDashboard.putNumber("LimeLight A Value", LimeLightTargetArea);
-
-		SmartDashboard.putBoolean("Hello", hello);
-		
+		SmartDashboard.putNumber("Hello", hello);
 	}
 
 	/**

@@ -21,7 +21,6 @@ public class AutoDriveCommand extends Command {
 	private double LLtx;
 	private double LLty;
 	private double LLta;
-	public boolean hi;
 
 	// Called just before this Command runs the first time
 	@Override
